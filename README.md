@@ -1,4 +1,9 @@
 # Laravel 5.6 and Vue.js 2.5 CRUD
+
+<p align="center">
+  <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/d3/3e/d33e9a8f0299fec736d86d442bf10636.png" />
+</p>
+
 A basic CRUD system with Laravel 5.6 and Vue.js 2.5
 
 ## Technologies
