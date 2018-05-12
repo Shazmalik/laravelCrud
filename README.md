@@ -1,7 +1,7 @@
 # Laravel 5.6 and Vue.js 2.5 CRUD
 
 <p align="center">
-  <img src="https://i.gyazo.com/9050ba2d21e3aa3ca1827512ad9e9bb8.png" />
+  <img src="https://i.gyazo.com/23953e74fa86a60584b99e044a4c1b66.png" />
 </p>
 
 A basic CRUD system with Laravel 5.6 and Vue.js 2.5
