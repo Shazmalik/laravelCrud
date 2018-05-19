@@ -45,7 +45,7 @@
             saveUser(){
                 let app = this;
                 let newUser = this.user;
-                axios.patch(`/api/users/${this.userId}`, newUser).then((response) =>{
+                axios.put(`/api/users/${this.userId}`, newUser).then((response) =>{
                     app.$router.replace('/');
                 })
             }
