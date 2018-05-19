@@ -6,12 +6,18 @@
 
 A basic CRUD system with Laravel 5.6 and Vue.js 2.5
 
-## Technologies
+## Technologies used
 * Vue.js
 * Vue Router
 * Axios
 * Laravel 5.6
 * MySQL
+
+## Basic requirements
+* PHP 7 
+* Composer installed
+* Node.js installed
+* Able to run npm
 
 ## Steps to run it
 
@@ -21,9 +27,9 @@ Rename the `.env.example` file to `.env`, and fill it with your local info, then
 
 Install the node dependencies:
 
-`
+```
 npm install
-`
+```
 
 Generate Laravel Keys:
 
