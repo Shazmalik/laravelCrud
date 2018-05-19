@@ -23,34 +23,43 @@ A basic CRUD system with Laravel 5.6 and Vue.js 2.5
 
 ### The common way
 
-Rename the `.env.example` file to `.env`, and fill it with your local info, then:
+Rename the `.env.example` file to `.env`.
 
-Install the node dependencies:
+Then, on your `.env` file, fill the `DB_DATABASE` variable with the absolute path to the `database.sqlite` file located in the project directory. An example might be:
+
+```
+DB_DATABASE=C:\Users\Elias\Desktop\laravel-vue-crud\database.sqlite
+```
+
+Install the dependencies:
 
 ```
 npm install
+composer install
 ```
 
 Generate Laravel Keys:
 
-`
+```
 php artisan key:generate
-`
+```
 
 Migrate and seed your local database:
 
-`
+```
 php artisan migrate --seed
-`
+```
 
 Compile the front-end:
 
-`
-npm run dev
-`
+```
+npm run prod
+```
 
-Run the server, after this you should see the app running on http://localhost:8000
+Run the server:
 
-`
+```
 php artisan serve
-`
+```
+
+After this you should see the app running on http://localhost:8000. Enjoy!!
