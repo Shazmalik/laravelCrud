@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return response(User::all()->jsonSerialize(), Response::HTTP_OK);
+        return response()->json(User::get(), 200);
     }
 
     /**
@@ -38,7 +38,7 @@ class UserController extends Controller
         $newUser->email = $request->email;
         $newUser->save();
 
-        return response($newUser->jsonSerialize(), Response::HTTP_CREATED);
+        return response()->json($newUser, 201);
     }
 
     /**
@@ -49,7 +49,11 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return User::findOrFail($id);
+        $user = User::find($id);
+        if(is_null($user)){
+            return response()->json(null, 404);
+        }
+        return response()->json($user, 200);
     }
 
     /**
@@ -61,10 +65,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $company = User::findOrFail($id);
-        $company->update($request->all());
+        $user = User::find($id);
+        $user->update($request->all());
 
-        return $company;
+        return response()->json($user, 200);
     }
 
     /**
@@ -77,6 +81,6 @@ class UserController extends Controller
     {
         User::destroy($id);
 
-        return response(null, Response::HTTP_OK);
+        return response()->json(null, 204);
     }
 }
