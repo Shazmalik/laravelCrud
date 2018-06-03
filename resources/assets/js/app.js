@@ -11,8 +11,10 @@ window.Vue = require('vue');
 
 import VueRouter from 'vue-router';
 import { routes } from './routes';
+import VeeValidate from 'vee-validate';
 
 Vue.use(VueRouter);
+Vue.use(VeeValidate);
 
 const router = new VueRouter({
     routes
