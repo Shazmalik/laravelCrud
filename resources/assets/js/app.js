@@ -12,13 +12,47 @@ window.Vue = require('vue');
 import VueRouter from 'vue-router';
 import { routes } from './routes';
 import VeeValidate from 'vee-validate';
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.min.css';
+import VueNotifications from 'vue-notifications';
+import iziToast from 'izitoast'// https://github.com/dolce/iziToast
+import 'izitoast/dist/css/iziToast.min.css';
+import VueSwal from 'vue-swal';
+import { Validator } from 'vee-validate';
+
+function toast ({title, message, type, timeout, cb}) {
+  if (type === VueNotifications.types.warn) type = 'warning'
+  return iziToast[type]({title, message, timeout})
+}
+
+const options = {
+  success: toast,
+  error: toast,
+  info: toast,
+  warn: toast
+}
 
 Vue.use(VueRouter);
 Vue.use(VeeValidate);
+Vue.use(Loading);
+Vue.use(VueNotifications, options);
+Vue.use(VueSwal)
 
 const router = new VueRouter({
     routes
 });
+
+const dictionary = {
+  en: {
+    attributes: {
+      email: 'Email',
+      first_name: 'First name',
+      last_name: 'Last name'
+    }
+  },
+};
+
+Validator.localize(dictionary);
 
 
 /**

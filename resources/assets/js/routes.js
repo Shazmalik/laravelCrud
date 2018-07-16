@@ -4,15 +4,18 @@ import EditForm from './components/Edit';
 
 export const routes = [
     {
-        path: '',
+        path: '/',
+        name: 'home',
         component: UsersTable
     },
     {
         path: '/user/create',
+        name: 'create',
         component: CreateForm
     },
     {
         path: '/user/:id',
+        name: 'edit',
         component: EditForm
     }
 ];

@@ -2,7 +2,7 @@
 	<div id="app">
 		<header>
 			<div id="branding">
-				<div class="logo">
+				<div @click="goHome" class="logo">
 					<img src="https://vuejs.org/images/logo.png" alt="Logo" title="Home page" class="img-fluid"/>
 				</div>
 			    <h1>Vue.js CRUD</h1>
@@ -19,6 +19,11 @@
 	export default {
 		components: {
 			UserTable
+		},
+		methods: {
+			goHome(){
+				this.$router.push({name: 'home'});
+			}
 		}
 	}	
 </script>
@@ -38,5 +43,6 @@
 
 .logo {
 	width: 100px;
+	cursor: pointer;
 }
 </style>

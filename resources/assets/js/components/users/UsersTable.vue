@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<router-link to="/user/create" class="btn btn-success mb-3">
+		<router-link :to="{name: 'create'}" class="btn btn-success mb-3">
 			Add user
 			<i class="fas fa-plus"></i>
 		</router-link>
@@ -37,12 +37,19 @@
 				this.users = response.data;
 			});
 		},
+		notifications: {
+            showSuccessMsg: {
+              type: 'success',
+              title: 'User deleted',
+              message: 'The user has been deleted successfully'
+            }
+        },
 		components: {
 			UserRow
 		},
 		methods: {
 		    removeUser(index){
-		        alert('User Deleted');
+		        this.showSuccessMsg();
 		        this.users.splice(index, 1);
 			}
 		}

@@ -15,7 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// users API
-Route::prefix('api')->group(function(){
-    Route::resource('users', 'UserController', ['except' => ['create']]);
-});
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
