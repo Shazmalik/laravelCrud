@@ -62,4 +62,9 @@ Run the server:
 php artisan serve
 ```
 
+*Note*: Is that is not working, try running this command: 
+```
+php -S localhost:8000 -t public
+```
+
 After this you should see the app running on http://localhost:8000. Enjoy!!
