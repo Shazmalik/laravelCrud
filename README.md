@@ -11,13 +11,14 @@ A basic CRUD system with Laravel 5.6 and Vue.js 2.5
 * Vue Router
 * Axios
 * Laravel 5.6
-* MySQL
+* SQLite
 
 ## Basic requirements
 * PHP 7 
 * Composer installed
 * Node.js installed
 * Able to run npm
+* SQLite installed on your computer
 
 ## Steps to run it
 
